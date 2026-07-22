@@ -1,0 +1,93 @@
+{
+  "_说明": "DaNiu-AI 技术学院爬虫配置",
+
+  "wordpress": {
+    "api_base": "https://www.daniu-ai.com/doc/wp-json/wp/v2",
+    "auth_user": "admin",
+    "auth_pass": "DANiu_Tech_Academy_API_Key_2026",
+    "default_status": "draft",
+    "default_author": 1
+  },
+
+  "categories": {
+    "超级员工": 8,
+    "智能客服": 9,
+    "AI短视频": 10,
+    "AI短剧": 11,
+    "AI直播": 12,
+    "AI推文图": 13,
+    "GEO引擎": 14,
+    "AI教培": 15,
+    "极客工具箱": 16,
+    "插件市场": 17,
+    "自动化工厂": 18,
+    "使用说明": 19,
+    "U-Claw": 5,
+    "U-Hermes": 6,
+    "本地大模型": 7,
+    "U-Codex": 39,
+    "技术学院首页": 35,
+    "未分类": 1
+  },
+
+  "category_keywords": {
+    "超级员工": ["超级员工", "ai employee", "自动化办公", "workflow automation", "企业ai", "员工", "生产力", "办公自动化", "数字员工"],
+    "智能客服": ["chatbot", "客服", "customer service", "智能问答", "客服机器人"],
+    "AI短视频": ["short video", "短视频", "视频生成", "video generation", "sora", "runway", "video ai", "text to video", "ai video", "gen-3", "kling", "pika"],
+    "AI短剧": ["短剧", "drama", "脚本生成", "ai film", "ai movie"],
+    "AI直播": ["直播", "live", "streaming", "虚拟人", "数字人"],
+    "AI推文图": ["推文", "图文", "文章配图", "content generation", "写作"],
+    "GEO引擎": ["geo", "搜索引擎", "搜索优化", "seo", "generative engine"],
+    "AI教培": ["教育", "培训", "course", "教程", "学习", "education"],
+    "极客工具箱": ["工具", "tool", "开源项目", "github", "cli", "效率"],
+    "插件市场": ["plugin", "插件", "extension", "marketplace", "集成"],
+    "自动化工厂": ["工厂", "自动化", "manufacturing", "机器人", "流水线"],
+    "使用说明": ["教程", "guide", "how to", "入门", "快速开始", "manual", "tutorial", "安装", "部署指南", "getting started", "step by step", "how to choose", "how to use", "配置"],
+    "U-Claw": ["claw", "dawniu", "大牛", "ecosystem", "技能"],
+    "U-Hermes": ["hermes", "agent", "多智能体", "orchestration"],
+    "本地大模型": ["llm", "本地模型", "ollama", "llama", "私有部署", "open source model", "模型发布", "gemini", "cosmos", "qwen", "release", "开源模型", "model release", "新模型", "foundation model"],
+    "U-Codex": ["codex", "ide", "api聚合", "模型聚合", "工作流引擎", "可视化开发", "low code", "no code", "workflow engine", "模型管理"]
+  },
+
+  "sources": {
+    "dev_to": {
+      "enabled": true,
+      "feed_url": "https://dev.to/feed/tag/ai",
+      "max_per_run": 10,
+      "interval_hours": 24,
+      "lang_filter": ["en", "zh"],
+      "title_keywords_include": [],
+      "title_keywords_exclude": ["sponsored", "ad", "promoted"]
+    },
+    "stackademic": {
+      "enabled": true,
+      "feed_url": "https://medium.com/feed/stackademic",
+      "max_per_run": 8,
+      "interval_hours": 24,
+      "lang_filter": ["en"],
+      "title_keywords_include": [],
+      "title_keywords_exclude": ["sponsored"]
+    },
+    "marktechpost": {
+      "enabled": true,
+      "feed_url": "https://www.marktechpost.com/feed/",
+      "max_per_run": 8,
+      "interval_hours": 24,
+      "lang_filter": ["en"],
+      "title_keywords_include": [],
+      "title_keywords_exclude": []
+    }
+  },
+
+  "quality": {
+    "min_title_length": 10,
+    "min_content_length": 500,
+    "max_content_length": 8000,
+    "allowed_tags": ["p","h2","h3","h4","ul","ol","li","pre","code","blockquote","strong","em","a","img","br"]
+  },
+
+  "output": {
+    "log_dir": "./logs",
+    "draft_dir": "./drafts"
+  }
+}
